@@ -14,17 +14,13 @@ h1, h2 { margin: 0; padding: 0; }
 .tc { text-align:center; }
 .l { float: left; }
 .r { float:right; }
-.cf {
-  &:after {
-    content: "";
-  }
-}
+.cf:after { content: ""; }
 
 body {
   color: $color-d;
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', arial, helvetica, sans-serif;
   margin: 20px;
-  background: $color-g url("/assets/line.gif") 0 0 repeat;
+  background: $color-g url("data:image/gif;base64,R0lGODlhBgAGAIAAAP///////yH5BAEAAAEALAAAAAAGAAYAAAIKhIOXgKGuDIOzAAA7") 0 0 repeat;
   text-align: center;
 }
 a {
@@ -35,6 +31,7 @@ a {
     text-decoration: underline;
   }
 }
+p { margin: 0.3em 0; }
 article {
   background-color: $color-a;
   color: $color-d;

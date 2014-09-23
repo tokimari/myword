@@ -1,13 +1,17 @@
 <h1>開発に使える英単語</h1>
 <p><%= link_to "by tokimari", "https://github.com/tokimari" %></p>
-<p>英語がからきし駄目なtokimariのお勉強用に、社内日報で配信している英単語録です。</p>
-<p>Dash用ドックセットで使えるように<%= link_to "こちら", "https://github.com/tokimari/mywords" %>で配布しています。<br><code>mw:</code>で検索できます。</p>
 <article>
-  <ol>
-    <% @words.each do |word| %>
-      <li><%= link_to word.name, word %> - <%= word.title %></li>
-    <% end %>
-  </ol>
+  <header>
+    <p>英語がからきし駄目なtokimariのお勉強用に、社内日報で配信している英単語録です。</p>
+    <p>Dash用ドックセットで使えるスクリプトは<%= link_to "こちら", "https://github.com/tokimari/mywords" %>で配布しています。</p>
+  </header>
+  <section>
+    <ol>
+      <% @words.each do |word| %>
+        <li><%= link_to word.name, word %> - <%= word.title %></li>
+      <% end %>
+    </ol>
+  </section>
 </article>
 <footer class="tr">
   <%= link_to 'New Word', new_word_path if user_signed_in? %>
