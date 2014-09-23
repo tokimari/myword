@@ -11,8 +11,12 @@
     <%= @word.description.html_safe %>
   </section>
 </article>
-<footer>
-  <%= link_to 'Edit', edit_word_path(@word) %> |
-  <%= link_to 'Destroy', @word, method: :delete, data: { confirm: 'Are you sure?' } %> |
-  <%= link_to 'Back', words_path %>
+<footer class="cf">
+  <div class="r">
+    <%= link_to 'Edit', edit_word_path(@word) %> |
+    <%= link_to 'Destroy', @word, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+  <div class="l">
+    <%= link_to 'Back', words_path %>
+  </div>
 </footer>
