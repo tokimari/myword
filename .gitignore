@@ -16,3 +16,6 @@
 /tmp
 log
 .DS_Store
+public/uploads
+tmp
+logs
