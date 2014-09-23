@@ -1,0 +1,9 @@
+// set vender prefix
+$set_prefix: -webkit-, -moz-, -ms-, '';
+
+// border-radius
+@mixin border-radius($radius) {
+  @each $prefix in $set_prefix {  
+    #{$prefix}border-radius: $radius;  
+  } 
+}

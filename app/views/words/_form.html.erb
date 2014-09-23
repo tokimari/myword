@@ -1,0 +1,25 @@
+<%= form_for(@word) do |f| %>
+  <% if @word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@word.errors.count, "error") %> prohibited this word from being saved:</h2>
+      <ul>
+      <% @word.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <dl>
+    <dt><%= f.label :name %></dt>
+    <dd><%= f.text_field :name, placeholder: '単語', maxlength: 20, size: 30 %></dd>
+    <dt><%= f.label :title %></dt>
+    <dd><%= f.text_field :title, placeholder: '意味', maxlength: 100, size: 30 %></dd>
+    <dt><%= f.label :pronunciation %></dt>
+    <dd><%= f.text_field :pronunciation, placeholder: '読み', maxlength: 60 %></dd>
+    <dt><%= f.label :description %></dt>
+    <dd><%= f.text_area :description, placeholder: '詳細', cold: 30, rows: 10 %></dd>
+    <%= f.hidden_field :entry_type, value: 'Notation' %>
+    <%= f.button :submit %>
+  </dl>
+<% end %>
