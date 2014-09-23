@@ -115,6 +115,10 @@ dd {
     height: 20px;
   }
 }
+footer {
+  margin: 20px auto;
+  max-width: 800px;
+}
 button {
   @include border-radius(5px);
   color: $color-d;

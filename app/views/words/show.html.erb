@@ -12,10 +12,12 @@
   </section>
 </article>
 <footer class="cf">
-  <div class="r">
-    <%= link_to 'Edit', edit_word_path(@word) %> |
-    <%= link_to 'Destroy', @word, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="r">
+      <%= link_to 'Edit', edit_word_path(@word) %> |
+      <%= link_to 'Destroy', @word, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
   <div class="l">
     <%= link_to 'Back', words_path %>
   </div>

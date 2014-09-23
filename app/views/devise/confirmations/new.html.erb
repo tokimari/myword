@@ -1,0 +1,14 @@
+<h2>Resend confirmation instructions</h2>
+<article>
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <dl>
+    <dt><%= f.label :email %></dt>
+    <dd><%= f.email_field :email, autofocus: true %></dd>
+  </dl>
+
+  <%= f.button "Resend confirmation instructions" %>
+<% end %>
+</article>
+<%= render "devise/shared/links" %>

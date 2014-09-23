@@ -10,5 +10,5 @@
   </ol>
 </article>
 <footer class="tr">
-  <%= link_to 'New Word', new_word_path %>
+  <%= link_to 'New Word', new_word_path if user_signed_in? %>
 </footer>
